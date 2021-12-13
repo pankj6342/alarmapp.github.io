@@ -1,0 +1,112 @@
+body{
+    background-image: url("bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-blend-mode:color-burn; */
+}
+
+#container{
+    margin:5%;
+    border:2px solid black;
+    display:flex;
+    justify-content: space-around;
+    height:70vh;
+    padding:5px;
+    background-color:rgba(255, 255, 255, 0.288);
+}
+
+#list{
+    color:white;
+    border:2px solid white;
+    width:30%;
+    padding:5px;
+    background:rgba(102, 140, 146, 0.644);
+    overflow-y:auto;
+}
+
+#new_alarm{
+    color:white;
+    text-align:center;
+    border:2px solid white;
+    width:40%;
+    background:rgba(102, 140, 146, 0.644);
+}
+
+.alarm{
+    display:flex;
+    justify-content:space-evenly;
+    border:2px solid rgb(44, 73, 78);
+    height:15%;
+    padding:5px;
+    text-align: center;
+    font-size:xx-large;
+}
+
+#ringAlarm{
+    display: none;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    position:absolute;
+    z-index:1;
+    height:90vh;
+    width:90vw;
+    margin:0% 5%;
+    background-color:rgb(44, 44, 44);
+    color:white;
+    text-align:center;
+    /* padding:10%; */
+}
+
+#alert{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 5rem;
+    margin:5%;
+}
+
+#pic{
+    /* position:fixed; */
+    margin:auto;
+    display:block;
+    width:90%;
+    /* height:90vh; */
+
+}
+
+.action{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: x-large;
+    margin:1%;
+    border-radius: 5px;
+    /* background-color: rgba(7, 175, 7, 0.925); */
+    padding:10px;
+}
+
+input{
+    width:80%;
+    font-size:x-large;
+    text-align:center;
+}
+
+.button{
+    height:70%;
+    margin-left:30%;
+    right:0px;
+}
+
+#alert{
+    /* background-color; */
+    border:5px solid green;
+    text-align: center;
+    padding:5px;
+    grid-column-end:4;
+    grid-column-start:2;
+}
+#okay{
+    grid-column-start:2;
+    grid-row-start:2;
+    background-color: rgba(8, 184, 8, 0.767);
+}
+#snooze{
+    grid-column-start:3;
+    background-color: rgba(255, 255, 0, 0.774);
+}

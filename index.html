@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="ringAlarm">
+        <img src="dog-smile.gif" alt="Your Cheems" id="pic">
+        <div id="alert">
+        demo text    
+        </div>
+        <br>
+        <button class="action" id="okay">Alright! </button>
+        <button class="action" id="snooze">Snooze for <input type="number" name="" id="snoozetime" min="5" max="30" step="5" value="5"> Minutes</button>
+    </div>
+
+    <div id="container">   
+        <div id="list">
+            <h2 style="text-align:center">My Alarms</h2>
+         </div>
+
+    <div id="new_alarm">
+        <h2>Set New Alarm</h2>
+        <label for="">Time</label>
+        <br>
+        <input type="time" name="" id="inputAlarm" step="1">  
+            <br>
+            <label for="">Alert Text</label>
+            <br>
+            <input type="text" name="" id="alert-text">
+            <br>
+            <button id="setAlarmBtn">Set Alarm</button>
+            <br><br>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+    </html>
+
+    <!-- bugs: 
+    1. delete alarm on alarm ring
+    2. delete alarm on untick;
+    3. show alert text in a span of alarm div  
+    -->
