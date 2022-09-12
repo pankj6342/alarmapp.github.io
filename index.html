@@ -1,48 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Alarm App</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alarm</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="(min-width:450px)" href="style.css">
+    <link rel="stylesheet" media="(max-width:449px)" href="style-u450.css">
 </head>
+
 <body>
-    <div id="ringAlarm">
-        <img src="dog-smile.gif" alt="Your Cheems" id="pic">
-        <div id="alert">
-        demo text    
+    <div class="setter">
+        <form>
+            <div class="select-time">
+                <div class="time">
+                    <div class="inc" onclick="alter('h',1)" ondblclick="alter('h',2)"></div>
+                    <input class="inp-time" type="number" name="hh" id="hh" min="1" max="12" disabled>
+                    <!-- <div class="inp-time" name="hh" id="hh">12</div> -->
+                    <div class="dec" onclick="alter('h',-1)" ondblclick="alter('h',-2)"></div>
+                </div>
+                <div class="txt">:</div>
+                <!-- <div class="inp-time">:</div> -->
+                <div class="time">
+                    <div class="inc" onclick="alter('m',1)" ondblclick="alter('m',2)"></div>
+                    <input class="inp-time" type="number" name="mm" id="mm" min="0" max="59" disabled>
+                    <div class="dec" onclick="alter('m',-1)" ondblclick="alter('m',-2)"></div>
+                </div>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="inp-time txt" id="meridian" onclick="alter( 'meri',0)">AM</div>
+            </div>
+            <input type="submit" class="button" id="add" value="Add Alarm">
+        </form>
+    </div>
+    <div class="alarms-div">
+        <div id="recent">
+            <!-- <div id="alarm1" class="alarms">
+                <div class="toggle" id="toggle-1">
+                    <div class="toggle-switch" id="toggle-switch-1"></div>
+                </div>
+                <div class="time">12:36PM</div>
+                <div id="close1" class="close">&Cross;</div>
+            </div> -->
         </div>
-        <br>
-        <button class="action" id="okay">Alright! </button>
-        <button class="action" id="snooze">Snooze for <input type="number" name="" id="snoozetime" min="5" max="30" step="5" value="5"> Minutes</button>
+        <div id="all-alarms">
+        </div>
+    </div>
+    <div class="active-alarm-container">
+        <div class="active-alarm"> 
+            <div class="active-alarm-content">
+                <div class="select-time">
+                    <div id="active-time">4:55 PM</div>
+                </div>
+                <div class="buttons">
+                    <button class="button button-stop" id="stop">Stop</button>
+                    <button class="button button-snooze">Snooze</button>
+                </div>
+            </div>   
+        </div>
     </div>
 
-    <div id="container">   
-        <div id="list">
-            <h2 style="text-align:center">My Alarms</h2>
-         </div>
+</body>
+<script src="app.js "></script>
 
-    <div id="new_alarm">
-        <h2>Set New Alarm</h2>
-        <label for="">Time</label>
-        <br>
-        <input type="time" name="" id="inputAlarm" step="1">  
-            <br>
-            <label for="">Alert Text</label>
-            <br>
-            <input type="text" name="" id="alert-text">
-            <br>
-            <button id="setAlarmBtn">Set Alarm</button>
-            <br><br>
-            </div>
-        </div>
-        <script src="script.js"></script>
-    </body>
-    </html>
-
-    <!-- bugs: 
-    1. delete alarm on alarm ring
-    2. delete alarm on untick;
-    3. show alert text in a span of alarm div  
-    -->
+</html>
